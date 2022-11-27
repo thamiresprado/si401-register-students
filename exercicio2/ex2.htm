@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8" />
+	<title>Cadastro de Pessoa</title>
+</head>
+<body>
+      
+	<h1>Cadastro de Pessoa</h1>
+	
+	<form action="ex2.php" method="POST">
+		<p>Nome: <input type="text" name="name" /> </p>
+		<p>CPF: <input type="text" name="cpf" /> </p>
+		<p>RG: <input type="text" name="rg" /> </p>
+		<p>Idade: <input type="text" name="age" /> </p>
+		<p>Sexo:</p>
+			<p><input type="radio" name="sexo" value="Masculino" /> Masculino </p>
+			<p><input type="radio" name="sexo" value="Feminino" /> Feminino </p>
+		<p>Estado Civil:</p>
+			<select name="estadoCivil">
+				<option value="Solteiro">Solteiro</option>
+				<option value="Casado">Casado</option>
+				<option value="Viúvo">Viúvo</option>
+				<option value="Divorciado">Divorciado</option>
+			</select>
+		<p>Telefone Fixo: <input type="text" name="telFixo" /> </p>
+		<p>Telefone Celular: <input type="text" name="telCelular" /> </p>
+		<p>Endereço: <input type="text" name="endereco" /> </p>
+		
+		<input type="submit" value="Cadastrar"/>
+	</form>
+
+      <!-- nome completo, CPF, RG, idade, sexo, estado civil, telefone fixo, telefone celular e endereço -->
+</body>
+</html>
