@@ -1,0 +1,1 @@
+Professor, tive problemas para rodar o programa via Xampp no macOS por falta de permissões para leitura e escrita. Estou criando uma pasta com prints do meu sistema, de forma a comprovar que ele funcionou normalmente no sistema Windows.

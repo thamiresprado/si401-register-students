@@ -4,7 +4,6 @@
 .table {
     border-collapse: collapse;
     margin: 0 auto;
-    font-size: 400;
     min-width: auto;
 }
 
@@ -18,7 +17,6 @@ td {
     border-bottom: 1px solid #ddd;
     padding: 12px 15px;
     text-align: left;
-    
 }
 
 th {
