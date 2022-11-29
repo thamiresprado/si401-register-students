@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@100;300;400;700&family=Ruda:wght@400;500&display=swap');
+
+/*PAGINA DE RELATORIO*/
+.table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 400;
+    min-width: auto;
+}
+
+p {
+    text-align: center;
+    color: #14213D;
+    font-size: 32px;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+    
+}
+
+th {
+    font-weight: 500;
+    padding: 10px;
+    text-align: left;
+    background-color: #14213D;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.voltar-button {
+    width: auto;
+    margin-top: 1.5rem;
+    border: none;
+    background-color: #FCA311;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #14213D;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.voltar-button button:hover{
+    background-color: #c97c00;
+    color: #fff;
+}

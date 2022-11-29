@@ -5,6 +5,10 @@
 	<title>Cadastro de Alunos</title>
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-relatorio.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  
 </head>
 <body>
    <div class="container">
@@ -22,16 +26,62 @@
                 <h1>Alunos cadastrados</h1>
             </div>
 
-            <div class="form-relatorio">
-                <a href="">
-                    <embed src="relatorio-alunos.txt">
-                </a>
+            <div class="form-relatorio" id="form-relatorio">
+                <section>
+                    <table id='table'>
+                        <thead>
+                            <tr>
+                                <th>RA</th>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Endereço</th>
+                                <th>Telefone</th>
+                                <th>Email</th>
+                                <th>Gênero</th>
+                            </tr>
+                        </thead>
+              
+                        <script>
+                            $(document).ready(function () {
+                                $.getJSON("RelatorioAlunos.json", 
+                                        function (data) {
+                                    var student = '';
+
+                                    const sortedData = data.sort((a,b) => (a.RA > b.RA) ? 1 : -1);
+
+                                    $.each(data, function (key, value) {
+                                        student += '<tbody><tr>';
+                                        student += '<td>' + 
+                                            value.RA + '</td>';
+              
+                                        student += '<td>' + 
+                                            value.Nome + '</td>';
+              
+                                        student += '<td>' + 
+                                            value.Idade + '</td>';
+              
+                                        student += '<td>' + 
+                                            value.Endereco + '</td>';
+                                        
+                                        student += '<td>' + 
+                                        value.Telefone + '</td>';
+            
+                                        student += '<td>' + 
+                                        value.Email + '</td>';
+            
+                                        student += '<td>' + 
+                                        value.Genero + '</td>';
+              
+                                        student += '</tr></tbody>';
+                                    });
+                                      
+                                    $('#table').append(student);
+                                });
+                            });
+                        </script>
+                </section>
             </div>
-
         </div>
-
-
    </div>
-
 </body>
 </html>
